@@ -1,0 +1,12 @@
+services:
+  web:
+    container_name: go_app
+    build: .
+    ports:
+      - 8000:8000
+    environment:
+      - PORT=8000
+      - REDIS_URL=redis
+  redis:
+    image: redis:alpine
+    
